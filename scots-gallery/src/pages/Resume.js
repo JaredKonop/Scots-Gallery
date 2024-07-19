@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import BasicExample from "../components/Navbar";
-import pdf from "../assets/Scot_Edgell_Resume.pdf";
+import { Container, Row, Button } from "react-bootstrap";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import pdf from "../assets/Scot_Edgell_Resume.pdf";
 import "../styles/styles.css";
 
-pdfjs.GlobalWorkerOptions.workerSrc =
-  "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+// Ensure the correct worker is being used
+pdfjs.GlobalWorkerOptions.workerSrc = `${process.env.PUBLIC_URL}/pdf.worker.min.js`;
 
 function Resume() {
   const [width, setWidth] = useState(window.innerWidth);
