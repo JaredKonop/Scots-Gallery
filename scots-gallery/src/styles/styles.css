@@ -1,0 +1,265 @@
+/* styles.css */
+
+.custom-card {
+  margin: 1rem;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  z-index: 1000; /* Ensure the navbar is above other content */
+  backdrop-filter: blur(
+    3px
+  ); /* Optional: Add a blur effect for better readability */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.card-body {
+  color: white;
+}
+
+.card-title {
+  padding-top: 5%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+.pt-5 {
+  padding-top: 3rem; /* Adjust the padding as necessary */
+}
+
+.mt-5 {
+  margin-top: 3rem; /* Adjust the margin as necessary */
+}
+
+.project {
+  margin-top: 5%;
+}
+.project-title {
+  width: 30%;
+  height: 10%;
+  background-color: #ffffff;
+  transform: skewX(20deg);
+  margin-top: 3%;
+  margin: 2%;
+  margin-left: -5%;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .project-title h1 {
+    font-size: large;
+  }
+}
+
+.project-title h1 {
+  transform: skewX(-20deg);
+  margin: 0;
+  padding: 4%;
+  padding-left: 20%;
+  text-align: center;
+  color: #002130;
+}
+
+.mini-title {
+  width: 30%;
+  height: 10%;
+  background-color: #ffffff;
+  transform: skewX(-20deg);
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: -5%;
+  position: relative;
+}
+
+.mini-title h1 {
+  transform: skewX(20deg);
+  margin: 0;
+  text-align: center;
+  padding: 4%;
+  padding-right: 20%;
+  color: #002130;
+}
+
+@media (max-width: 600px) {
+  .mini-title h1 {
+    font-size: large;
+  }
+}
+
+/* styles.css */
+.large-text {
+  font-size: 3.5rem;
+  margin-top: 5%;
+  padding-top: 5%;
+}
+
+@media (max-width: 768px) {
+  .large-text {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .large-text {
+    font-size: 1.5rem;
+  }
+}
+
+.nav-link:hover {
+  color: rgb(68, 214, 224);
+}
+
+.nav-icon {
+  padding-right: 5px;
+}
+.nav-link:hover .nav-icon {
+  color: rgb(68, 214, 224);
+}
+.nav-link:hover .nav-text {
+  color: rgb(137, 173, 175);
+}
+
+.basic-navbar-nav {
+  color: white;
+}
+.navbar-toggler {
+  color: white;
+}
+.navbar-nav .nav-link {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: large;
+}
+.basic-navbar-nav {
+  border-color: rgba(255, 255, 255, 1);
+}
+.navbar-toggler-icon {
+  border-color: rgba(255, 255, 255, 1);
+}
+.nav-link-with-icon {
+  display: flex;
+  align-items: center;
+}
+
+#tsparticles {
+  height: 5px;
+}
+
+.transparent-background {
+  bottom: 0;
+  width: 100%;
+  /* background: rgba(0, 0, 0, 0.3); Semi-transparent background */
+  z-index: 1000; /* Ensure the navbar is above other content */
+  /* backdrop-filter: blur(
+      10px
+    ); Optional: Add a blur effect for better readability */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+footer {
+  margin-bottom: 0;
+}
+.footer-text {
+  font-size: large;
+  color: white;
+}
+
+text-body.footer-text {
+  color: white;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  /* background: rgba(0, 0, 0, 0.6); Semi-transparent background */
+  z-index: 2000; /* Ensure the navbar is above other content */
+  /* backdrop-filter: blur(
+      10px
+    ); Optional: Add a blur effect for better readability */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.content {
+  padding-top: 70px; /* Adjust based on the height of your navbar */
+}
+
+.pdf-container {
+  width: 100%;
+  overflow: auto;
+  padding: 2%;
+  margin: 2%;
+  box-sizing: border-box;
+}
+
+.resume-container {
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: 16px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.resume-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1%;
+}
+
+.resume-title {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.projects-title {
+  margin-bottom: 20px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .resume-container {
+    font-size: 12px;
+    padding: 2%;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-container {
+    font-size: 10px;
+    padding: 2%;
+  }
+}
+
+.btn.btn-primary {
+  font-size: 1.5em;
+  padding: 25px 10px;
+  max-width: none;
+  width: auto;
+  background-color: #fff;
+  border-color: #000000;
+  color: #002630;
+}
+
+.sourcecode-btn {
+  background-color: #fff;
+  border-color: #000000;
+  color: #002630;
+}
+
+.sourcecode-btn:hover {
+  background-color: #03323d;
+  border-color: #000000;
+  color: #ffffff;
+}

@@ -1,0 +1,39 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #9e9e9e; /* Pinkish */
+  text-align: center;
+}
+
+.page h1 {
+  font-size: 4rem;
+  color: black;
+}
+
+.page p {
+  font-size: 2rem;
+  color: black;
+}
+
+.page {
+  padding: 200px;
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.nova-pic {
+  margin-right: 25px;
+  width: 170px;
+  height: auto;
+}
+
+p {
+  /* flex: 1; */
+  word-wrap: break-word;
+}
