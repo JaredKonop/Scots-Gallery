@@ -73,13 +73,13 @@ h2 {
 .navbar ul {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   justify-self: end;
 }
 
 .nav-item a {
   color: #000;
-  font-size: 0.9rem;
+  font-size: 2rem;
   font-weight: 400;
   text-decoration: none;
   transition: color 0.3s ease-out;
@@ -277,8 +277,8 @@ input {
     position: fixed;
     justify-content: start;
     top: 10vh;
-    background-color: #fff;
-    width: 100%;
+    background-color: #00000093;
+    width: 50%;
     height: calc(100vh - 55px);
     transform: translate(-101%);
     text-align: center;
@@ -294,7 +294,8 @@ input {
   }
 
   .navbar li a {
-    font-size: 1rem;
+    font-size: 2rem;
+    color: white;
   }
 
   .menu-toggle,
