@@ -30,7 +30,7 @@ const images = [
 
 const ImageGallery = () => {
   return (
-    <div className="container">
+    <div className="image-gallery-container">
       <h1 className="heading">
         <span>Galllery </span>
       </h1>

@@ -242,6 +242,20 @@ text-body.footer-text {
   }
 }
 
+@media (max-width: 300px) {
+  .resume-container {
+    font-size: 5px;
+    padding: 2%;
+  }
+  .pdf-container {
+    width: 100%;
+    overflow: auto;
+    padding: 2%;
+    margin: 2%;
+    box-sizing: border-box;
+  }
+}
+
 .btn.btn-primary {
   font-size: 1.5em;
   padding: 25px 10px;

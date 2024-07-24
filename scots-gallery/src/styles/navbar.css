@@ -79,7 +79,7 @@ h2 {
 
 .nav-item a {
   color: #000;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
   text-decoration: none;
   transition: color 0.3s ease-out;
@@ -274,15 +274,16 @@ input {
   .navbar ul {
     display: flex;
     flex-direction: column;
-    position: fixed;
+    position: fixed; /* Fixes the navbar in place */
     justify-content: start;
     top: 10vh;
-    background-color: #00000093;
+    background-color: #00000093; /* Semi-transparent background */
     width: 50%;
-    height: calc(100vh - 55px);
-    transform: translate(-101%);
+    height: calc(100vh - 55px); /* Full height minus some space */
+    transform: translate(-101%); /* Adjust as needed for visibility */
     text-align: center;
     overflow: hidden;
+    z-index: 1000; /* Ensure navbar is on top of other content */
   }
 
   .navbar li {

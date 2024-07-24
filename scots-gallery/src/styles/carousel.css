@@ -1,0 +1,103 @@
+/* Reset and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image: radial-gradient(mintcream 0%, lightgray 100%);
+}
+
+.heading {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  padding: 1rem 0;
+  color: #1a1a1a;
+}
+
+/* Carousel container */
+.carousel-container {
+  margin: 0 auto; /* Center horizontally */
+  width: auto; /* Full width of the container */
+  height: 4vh; /* Adjust height as needed */
+  perspective: 1000px; /* 3D perspective */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+#carousel {
+  width: 2vw; /* Set a fixed width */
+  height: 2vh; /* Set a fixed height */
+  position: relative; /* Relative positioning for child elements */
+  transform-style: preserve-3d;
+  animation: rotation 60s infinite linear;
+  padding-bottom: 10%;
+}
+
+#carousel:hover {
+  animation-play-state: paused; /* Pause animation on hover */
+}
+
+#carousel figure {
+  display: block;
+  position: absolute;
+  width: 20vw;
+  height: 18vh;
+  background: black;
+  overflow: hidden;
+  border: solid 1px black;
+}
+
+/* Individual figure transforms */
+#carousel figure:nth-child(1) {
+  transform: rotateY(0deg) translateZ(288px);
+}
+#carousel figure:nth-child(2) {
+  transform: rotateY(60deg) translateZ(288px);
+}
+#carousel figure:nth-child(3) {
+  transform: rotateY(120deg) translateZ(288px);
+}
+#carousel figure:nth-child(4) {
+  transform: rotateY(180deg) translateZ(288px);
+}
+#carousel figure:nth-child(5) {
+  transform: rotateY(240deg) translateZ(288px);
+}
+#carousel figure:nth-child(6) {
+  transform: rotateY(300deg) translateZ(288px);
+}
+
+img {
+  -webkit-filter: grayscale(1);
+  cursor: pointer;
+  transition: all 5.5s ease;
+}
+
+img:hover {
+  -webkit-filter: grayscale(0);
+  transform: scale(1.2, 1.2);
+}
+
+/* Keyframes for rotation */
+@keyframes rotation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}

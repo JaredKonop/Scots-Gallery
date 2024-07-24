@@ -3,11 +3,11 @@ import { Container, Row, Button } from "react-bootstrap";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-import pdf from "../assets/Scot_Edgell_Resume.pdf";
+import pdf from "../assets/Resume.pdf";
 import "../styles/styles.css";
 
 // Ensure the correct worker is being used
-pdfjs.GlobalWorkerOptions.workerSrc = `${process.env.PUBLIC_URL}/pdf.worker.min.js`;
+pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.mjs";
 
 function Resume() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -50,6 +50,9 @@ function Resume() {
             file={pdf}
             renderMode="canvas"
             className="d-flex justify-content-center"
+            onLoadError={(error) =>
+              console.error("Error loading document:", error)
+            }
           >
             <Page pageNumber={1} scale={getScaleValue()} />
           </Document>

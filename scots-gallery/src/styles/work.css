@@ -1,0 +1,19 @@
+.work-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.image-gallery-container,
+.carousel-container {
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Example max-width to prevent excessive stretching */
+  box-sizing: border-box;
+}
+
+/* Optional: Add margins or paddings to make sure content is spaced */
+.image-gallery-container {
+  margin-bottom: 40px; /* Space between ImageGallery and Carousel */
+}

@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #9e9e9e; /* Pinkish */
+  background-color: #9e9e9e;
   text-align: center;
 }
 
@@ -34,6 +34,5 @@
 }
 
 p {
-  /* flex: 1; */
   word-wrap: break-word;
 }
