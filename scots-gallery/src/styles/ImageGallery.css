@@ -26,7 +26,37 @@ body {
   line-height: 1.5;
   text-align: center;
   padding: 1rem 0;
-  color: #a01919;
+  color: #d61616;
+}
+:root {
+  font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fafafa;
+}
+
+.image-gallery-container {
+  max-width: 100%;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+.heading {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  padding: 1rem 0;
+  color: #d61616;
 }
 
 .gallery {
@@ -41,7 +71,46 @@ body {
   margin: 1rem;
   box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
   overflow: hidden;
-  z-index: -1;
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+  transform: scale(1.15);
+}
+
+/* Grid layout support */
+@supports (display: grid) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(25% - 2rem), 1fr));
+    grid-gap: 2rem;
+  }
+
+  .gallery,
+  .gallery-item {
+    margin: 0;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between items */
+  justify-content: center; /* Center items horizontally */
+}
+
+.gallery-item {
+  flex: 1 0 calc(25% - 2rem);
+  margin: 1rem;
+  box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+  overflow: hidden;
 }
 
 .gallery-image {
