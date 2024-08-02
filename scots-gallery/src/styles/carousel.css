@@ -54,8 +54,8 @@ body {
 #carousel figure {
   display: block;
   position: absolute;
-  width: 20vw;
-  height: 18vh;
+  width: 30vw;
+  height: 27vh;
   background: black;
   overflow: hidden;
   border: solid 1px black;
@@ -81,11 +81,11 @@ body {
   transform: rotateY(300deg) translateZ(288px);
 }
 
-img {
+/* img {
   -webkit-filter: grayscale(1);
   cursor: pointer;
   transition: all 5.5s ease;
-}
+} */
 
 img:hover {
   -webkit-filter: grayscale(0);
