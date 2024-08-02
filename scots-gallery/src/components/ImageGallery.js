@@ -1,43 +1,43 @@
 import React from "react";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 import "../styles/ImageGallery.css";
+import logo1 from "../assets/logos/Logo 1.png";
+import logo2 from "../assets/logos/Logo 2.png";
+import logo3 from "../assets/logos/Logo 3.png";
+import logo4 from "../assets/logos/Logo 4.png";
+import logo5 from "../assets/logos/Logo 5.png";
+import logo6 from "../assets/logos/Logo 6.png";
+import logo7 from "../assets/logos/Logo 7.png";
+import logo8 from "../assets/logos/Logo 8.png";
+import logo9 from "../assets/logos/Logo 9.png";
+import logo10 from "../assets/logos/Logo 10.png";
 
 const images = [
-  {
-    src: "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&h=500&fit=crop",
-    alt: "person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1515260268569-9271009adfdb?w=500&h=500&fit=crop",
-    alt: "sunset behind San Francisco city skyline",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1506045412240-22980140a405?w=500&h=500&fit=crop",
-    alt: "people holding umbrellas on a busy street at night lit by street lights and illuminated signs in Tokyo, Japan",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1514041181368-bca62cceffcd?w=500&h=500&fit=crop",
-    alt: "car interior from central back seat position showing driver and blurred view through windscreen of a busy road at night",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1445810694374-0a94739e4a03?w=500&h=500&fit=crop",
-    alt: "back view of woman wearing a backpack and beanie waiting to cross the road on a busy street at night in New York City, USA",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1486334803289-1623f249dd1e?w=500&h=500&fit=crop",
-    alt: "man wearing a black jacket, white shirt, blue jeans, and brown boots, playing a white electric guitar while sitting on an amp",
-  },
+  { src: logo1, alt: "Description for logo1" },
+  { src: logo2, alt: "Description for logo2" },
+  { src: logo3, alt: "Description for logo3" },
+  { src: logo4, alt: "Description for logo4" },
+  { src: logo5, alt: "Description for logo5" },
+  { src: logo6, alt: "Description for logo6" },
+  { src: logo7, alt: "Description for logo7" },
+  { src: logo8, alt: "Description for logo8" },
+  { src: logo9, alt: "Description for logo9" },
+  { src: logo10, alt: "Description for logo10" },
 ];
 
 const ImageGallery = () => {
   return (
     <div className="image-gallery-container">
       <h1 className="heading">
-        <span>Galllery </span>
+        <span>Gallery</span>
       </h1>
       <div className="gallery">
         {images.map((image, index) => (
           <div className="gallery-item" key={index}>
-            <img className="gallery-image" src={image.src} alt={image.alt} />
+            <Zoom>
+              <img className="gallery-image" src={image.src} alt={image.alt} />
+            </Zoom>
           </div>
         ))}
       </div>

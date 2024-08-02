@@ -11,9 +11,6 @@ const Work = () => {
       <div className="image-gallery-container">
         <ImageGallery />
       </div>
-      <div className="carousel-container">
-        <Carousel />
-      </div>
     </div>
   );
 };

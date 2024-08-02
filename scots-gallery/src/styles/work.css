@@ -1,10 +1,40 @@
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.work-container {
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  animation: gradient 60s linear infinite; /* Adjust duration for continuous loop */
+  background: linear-gradient(
+    45deg,
+    #ff7e5f,
+    #feb47b,
+    #ff9a9e,
+    #fad0c4,
+    #6a11cb,
+    #2575fc,
+    #a8c0ff,
+    #3f2b96
+  );
+  background-size: 400% 400%; /* Larger background size for smooth transition */
+  gap: 20px;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+/* 
 .work-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   padding: 20px;
-}
+} */
 
 .image-gallery-container,
 .carousel-container {

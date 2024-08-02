@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/navbar.css"; // Import CSS file
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // FontAwesome for the search icon
 import { faSearch } from "@fortawesome/free-solid-svg-icons"; // Import specific icons
-import logo from "../assets/Logo.png";
+import logo from "../assets/Signature.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
