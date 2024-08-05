@@ -202,6 +202,11 @@ text-body.footer-text {
   margin: 2%;
   box-sizing: border-box;
 }
+.d-flex {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+}
 
 .resume-container {
   max-width: 100%;
@@ -221,6 +226,9 @@ text-body.footer-text {
 .resume-title {
   margin-bottom: 20px;
   color: white;
+}
+.react-pdf__Page__textContent {
+  display: none;
 }
 
 .projects-title {

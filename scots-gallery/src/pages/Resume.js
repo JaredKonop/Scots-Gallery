@@ -11,12 +11,17 @@ pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.mjs";
 
 function Resume() {
   const [width, setWidth] = useState(window.innerWidth);
+  const [numPages, setNumPages] = useState(null);
 
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  const onDocumentLoadSuccess = ({ numPages }) => {
+    setNumPages(numPages);
+  };
 
   const getScaleValue = () => {
     if (width > 1200) {
@@ -50,14 +55,20 @@ function Resume() {
             file={pdf}
             renderMode="canvas"
             className="d-flex justify-content-center"
+            onLoadSuccess={onDocumentLoadSuccess}
             onLoadError={(error) =>
               console.error("Error loading document:", error)
             }
           >
-            <Page pageNumber={1} scale={getScaleValue()} />
+            {Array.from(new Array(numPages), (el, index) => (
+              <Page
+                key={`page_${index + 1}`}
+                pageNumber={index + 1}
+                scale={getScaleValue()}
+              />
+            ))}
           </Document>
         </div>
-        <Row style={{ justifyContent: "center", position: "relative" }}></Row>
       </Container>
     </div>
   );
