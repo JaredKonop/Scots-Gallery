@@ -12,6 +12,7 @@ import logo7 from "../assets/logos/Logo 7.png";
 import logo8 from "../assets/logos/Logo 8.png";
 import logo9 from "../assets/logos/Logo 9.png";
 import logo10 from "../assets/logos/Logo 10.png";
+import ComparisonSlider from "./ComparisonSlider";
 
 const images = [
   { src: logo1, alt: "Description for logo1" },
@@ -30,7 +31,7 @@ const ImageGallery = () => {
   return (
     <div className="image-gallery-container">
       <h1 className="heading">
-        <span>Gallery</span>
+        <span>Custom Logos</span>
       </h1>
       <div className="gallery">
         {images.map((image, index) => (
@@ -41,6 +42,10 @@ const ImageGallery = () => {
           </div>
         ))}
       </div>
+      <h1 className="heading">
+        <span>Image Restoration</span>
+      </h1>
+      <ComparisonSlider />
     </div>
   );
 };

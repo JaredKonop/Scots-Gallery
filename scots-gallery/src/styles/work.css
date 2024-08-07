@@ -10,7 +10,7 @@
 .work-container {
   height: 100vh; /* Full viewport height */
   width: 100%; /* Full width */
-  animation: gradient 60s linear infinite; /* Adjust duration for continuous loop */
+  /* animation: gradient 60s linear infinite; 
   background: linear-gradient(
     45deg,
     #ff7e5f,
@@ -22,7 +22,7 @@
     #a8c0ff,
     #3f2b96
   );
-  background-size: 400% 400%; /* Larger background size for smooth transition */
+  background-size: 400% 400%;  */
   gap: 20px;
   padding-right: 10%;
   padding-left: 10%;
